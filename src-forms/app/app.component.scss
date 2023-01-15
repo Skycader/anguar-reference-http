@@ -1,0 +1,24 @@
+p {
+  font-size: 1.5rem;
+}
+
+
+input {
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  &.ng-valid.ng-touched {
+    border: 1px solid green;
+  }
+  &.ng-pending.ng-touched {
+    border: 1px solid rgb(76, 0, 255);
+    animation: await linear 1s infinite;
+  }
+}
+ 
+@keyframes await {
+  0% { border: 1px solid rgb(76, 0, 255) }
+  50%   { border: 1px solid rgb(78, 30, 154) }
+  100% { border: 1px solid rgb(76, 0, 255) }
+
+}
